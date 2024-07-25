@@ -1,25 +1,30 @@
 "use client"
 import { useState } from 'react';
+import store from 'store2';
 import { districts } from '../data/districts';
+import Link from 'next/link';
 
 export default function Home() {
-  const [selectedDistrict, setSelectedDistrict] = useState(null);
-  const [selectedUniversity, setSelectedUniversity] = useState(null);
-  const [selectedHostel, setSelectedHostel] = useState(null);
+  const [selectedDistrict, setSelectedDistrict] = useState(store.get('selectedDistrict') || null);
+  const [selectedUniversity, setSelectedUniversity] = useState(store.get('selectedUniversity') || null);
+  const [selectedHostel, setSelectedHostel] = useState(store.get('selectedHostel') || null);
 
   const handleDistrictSelection = (district) => {
     setSelectedDistrict(district);
     setSelectedUniversity(null);
     setSelectedHostel(null);
+    store.set('selectedDistrict', district);
   };
 
   const handleUniversitySelection = (university) => {
     setSelectedUniversity(university);
     setSelectedHostel(null);
+    store.set('selectedUniversity', university);
   };
 
   const handleHostelSelection = (hostel) => {
     setSelectedHostel(hostel);
+    store.set('selectedHostel', hostel);
   };
 
   return (
@@ -46,25 +51,32 @@ export default function Home() {
                   </button>
                 ))}
                 {selectedUniversity && (
-                  <div className="w-full flex flex-col items-center mt-2">
-                    {district.universities.find(u => u.name === selectedUniversity).hostels.map((hostel) => (
-                      <button
-                        key={hostel}
-                        className={`w-3/4 md:w-1/3 px-4 py-2 mt-1 rounded-lg ${selectedHostel === hostel ? 'bg-red-600 text-white' : 'bg-red-100 text-red-800'}`}
-                        onClick={() => handleHostelSelection(hostel)}
-                      >
-                        {hostel}
-                      </button>
-                    ))}
-                  </div>
-                )}
+  <div className="w-full flex flex-col items-center mt-2">
+    {/* Find the selected university */}
+    {district.universities.find(u => u.name === selectedUniversity)?.hostels.map((hostel) => (
+      <button
+        key={hostel}
+        className={`w-3/4 md:w-1/3 px-4 py-2 mt-1 rounded-lg ${selectedHostel === hostel ? 'bg-red-600 text-white' : 'bg-red-100 text-red-800'}`}
+        onClick={() => handleHostelSelection(hostel)}
+      >
+        {hostel}
+      </button>
+    ))}
+  </div>
+)}
+
               </div>
             )}
           </div>
         ))}
       </div>
       {selectedHostel && (
-        <button className="mt-4 px-4 py-2 rounded-lg bg-orange-700 text-white">Continue</button>
+        <Link 
+          className="mt-4 px-4 py-2 rounded-lg bg-orange-700 text-white"
+          href = '/hostels'
+        >
+          Continue
+        </Link>
       )}
     </div>
   );
