@@ -4,12 +4,12 @@ export const districts = [
     universities: [
       {
         name: 'UNIMA (Chanco)',
-        hostels: ['Find boys hostels', 'Find girls hostels']
+        hostels: ['Boys hostels', 'Girls hostels']
       },
-      {
-        name: 'Domasi College of Education',
-        hostels: ['Find boys hostels', 'Find girls hostels']
-      }
+      // {
+      //   name: 'Domasi College of Education',
+      //   hostels: ['Boys hostels', 'Girls hostels']
+      // }
     ]
   },
   {
@@ -17,7 +17,7 @@ export const districts = [
     universities: [
       {
         name: 'Mzuzu University',
-        hostels: ['Find boys hostels', 'Find girls hostels']
+        hostels: ['Boys hostels', 'Girls hostels']
       }
     ]
   },
@@ -26,7 +26,7 @@ export const districts = [
     universities: [
       {
         name: 'Malawi University of Science and Technology',
-        hostels: ['Find boys hostels', 'Find girls hostels']
+        hostels: ['Boys hostels', 'Girls hostels']
       }
     ]
   },
@@ -35,11 +35,11 @@ export const districts = [
     universities: [
       {
         name: 'Malawi Polytechnic',
-        hostels: ['Find boys hostels', 'Find girls hostels']
+        hostels: ['Boys hostels', 'Girls hostels']
       },
       {
         name: 'College of Medicine',
-        hostels: ['Find boys hostels', 'Find girls hostels']
+        hostels: ['Boys hostels', 'Girls hostels']
       }
     ]
   },
@@ -48,7 +48,7 @@ export const districts = [
     universities: [
       {
         name: 'Lilongwe University of Agriculture and Natural Resources',
-        hostels: ['Find boys hostels', 'Find girls hostels']
+        hostels: ['Boys hostels', 'Girls hostels']
       }
     ]
   }
