@@ -9,7 +9,7 @@ export default function Home() {
 
       <section className="flex flex-col m-auto">
         <div className="">
-          <h1 className="text-4xl font-bold mb-4 text-gray-800">Hello, welcome to the <span className="text-orange-700">UniAcc</span></h1>
+          <h1 className="text-4xl font-bold mb-4 text-gray-800">Hello, welcome to <span className="text-orange-700">UniAcc</span></h1>
           <h3 className=" text-gray-800">A place you will find good and cheap <span className="text-orange-700">accomodation</span>  during your <span className="font-bold">graduation</span></h3>
         </div>
 
