@@ -15,10 +15,10 @@ export default function DistrictPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <NavBar selectedDistrict={selectedDistrict} onDistrictSelect={(district) => store.set('selectedDistrict', district)} />
+      <NavBar />
       <div className="p-4">
         <h1 className="text-2xl font-bold text-gray-800 mb-4">
-          {selectedDistrict} - {selectedUniversity} - {selectedHostel}
+          {store.get("selectedDistrict")} - {store.get("selectedUniversity")} - {store.get("selectedHostel")}
         </h1>
         <HostelList hostels={hostelsData} />
       </div>
