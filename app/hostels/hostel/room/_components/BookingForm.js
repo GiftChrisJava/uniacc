@@ -57,7 +57,7 @@ export default function BookingForm({ onClose }) {
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50" onClick={onClose}>
       <div className="bg-white rounded-lg shadow-lg p-6 max-w-md w-11/12 sm:w-3/4 md:w-1/2 lg:w-1/3 relative" onClick={(e) => e.stopPropagation()}>
         <button className="absolute top-2 right-2 text-gray-600" onClick={onClose}>×</button>
-        <h2 className="text-xl font-bold mb-4">Booking Information</h2>
+        <h2 className="text-xl font-bold mb-4 text-gray-900">Booking Information</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <div>
             <p className="text-red-500 mb-2">It is important to provide your email and phone number for all communications.</p>
@@ -85,7 +85,7 @@ export default function BookingForm({ onClose }) {
             Booking for 1 person per bed for {nights} nights
           </div>
           <div className="text-gray-800 font-bold">
-            Total Price: ${price}
+            Total Price: MWK {price}
           </div>
           <button 
             type="submit" 
