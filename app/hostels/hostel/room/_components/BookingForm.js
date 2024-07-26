@@ -1,8 +1,10 @@
 "use client"
 import { useState, useEffect } from 'react';
 import store from 'store2';
+import { useRouter } from 'next/navigation';
 
 export default function BookingForm({ onClose }) {
+  const router = useRouter();
   const [email, setEmail] = useState(store.get('email') || '');
   const [phone, setPhone] = useState(store.get('phone') || '');
   const [errorMessage, setErrorMessage] = useState('');
@@ -47,7 +49,8 @@ export default function BookingForm({ onClose }) {
     store.set('email', email);
     store.set('phone', phone);
     setErrorMessage('');
-    // Proceed with submission logic (e.g., API call)
+    // Proceed to payment page
+    router.push('/hostels/hostel/room/payment');
   };
 
   return (
