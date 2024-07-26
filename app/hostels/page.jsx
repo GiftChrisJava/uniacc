@@ -5,6 +5,7 @@ import NavBar from '../_components/NavBar';
 import HostelList from '../_components/HostelList';
 import { hostelsData } from '../data/hostels';
 import { districts } from '../data/districts';
+import Link from 'next/link';
 
 export default function DistrictPage() {
   const selectedDistrict = store.get('selectedDistrict');
@@ -20,7 +21,10 @@ export default function DistrictPage() {
         <h1 className="text-2xl font-bold text-gray-800 mb-4">
           {store.get("selectedDistrict")} - {store.get("selectedUniversity")} - {store.get("selectedHostel")}
         </h1>
-        <HostelList hostels={hostelsData} />
+
+        <Link href={"/hostels/hostel"}>
+          <HostelList hostels={hostelsData} />
+        </Link>
       </div>
     </div>
   );
