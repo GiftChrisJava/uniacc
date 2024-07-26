@@ -12,7 +12,7 @@ export const hostelsData = [
     images: [img1, img2, img3],
     owner: 'John Doe',
     location: 'On-campus',
-    price: '$100 per bed'
+    price: 'MWK 15,000 per night'
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const hostelsData = [
     images: [img5, img6],
     owner: 'Jane Smith',
     location: 'Off-campus',
-    price: '$80 per bed'
+    price: 'MWK 12,000 per night'
   },
   // Add more hostels here
 ];
