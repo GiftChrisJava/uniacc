@@ -1,7 +1,6 @@
 "use client"
 import Image from 'next/image';
 import roomImage from '../../../public/a.jpeg';
-import { ShowerHead } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Room() {
@@ -29,11 +28,11 @@ export default function Room() {
       <div className="relative w-full max-w-md h-64 mb-4">
         <Image src={roomImage} alt="Room" layout="fill" objectFit="cover" className="rounded-lg" />
       </div>
-      <h5 className='mt-2'>Price : $100</h5>
+      <h5 className='mt-2'>Price : Mwk15,000 <span>per night</span></h5>
 
       <h3 className="text-lg font-bold text-gray-800 mb-2 mt-8">Room Rules</h3>
       <p className="text-gray-700 mb-4">
-        This is a shared space; respect is a must. Losing keys will attract a fee of MWK 30,000. No drinking or smoking.
+        This is a shared space; respect is a must. Losing keys will attract a fee of MWK 30,000. No drinking or smoking. No bed sharing
       </p>
 
       <Link href="/hostels/hostel/room" className="px-6 py-2 mt-8 rounded-lg bg-orange-700 text-white text-lg font-bold">I want to book this room</Link>

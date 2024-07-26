@@ -1,7 +1,6 @@
 // DistrictPage.jsx
 "use client"
 import store from 'store2';
-import NavBar from '../_components/NavBar';
 import HostelList from '../_components/HostelList';
 import { hostelsData } from '../data/hostels';
 import { districts } from '../data/districts';
@@ -16,7 +15,6 @@ export default function DistrictPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <NavBar />
       <div className="p-4">
         <h1 className="text-2xl font-bold text-gray-800 mb-4">
           {store.get("selectedDistrict")} - {store.get("selectedUniversity")} - {store.get("selectedHostel")}

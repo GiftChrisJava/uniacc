@@ -3,6 +3,7 @@ import { useState } from 'react';
 import store from 'store2';
 import { districts } from '../data/districts';
 import Link from 'next/link';
+import NavBar from '../_components/NavBar';
 
 export default function Home() {
   const [selectedDistrict, setSelectedDistrict] = useState(store.get('selectedDistrict') || null);
@@ -28,7 +29,9 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center p-4">
+    <div>
+      <NavBar/>
+      <div className="min-h-screen bg-gray-50 flex flex-col items-center p-4">
       <h1 className="text-2xl mb-10 font-bold text-gray-800">Hello, please select venue for your graduation</h1>
       <div className="w-full md:w-1/2 flex flex-col items-center gap-4 mb-4">
         {districts.map((district) => (
@@ -82,6 +85,7 @@ export default function Home() {
         ))}
       </div>
       
+    </div>
     </div>
   );
 }
