@@ -20,13 +20,13 @@ export default function Booking() {
   return (
     <div className="min-h-screen bg-gray-50 p-4 flex flex-col items-center">
       <div className="grid grid-cols-3 gap-2 mb-8">
-        <div className="relative w-28 h-24">
+        <div className="relative w-28 h-28">
           <Image src={img1} alt="Image 1" layout="fill" objectFit="cover" className="rounded-lg" />
         </div>
-        <div className="relative w-28 h-24">
+        <div className="relative w-28 h-28">
           <Image src={img2} alt="Image 2" layout="fill" objectFit="cover" className="rounded-lg" />
         </div>
-        <div className="relative w-28 h-24">
+        <div className="relative w-28 h-28">
           <Image src={img3} alt="Image 3" layout="fill" objectFit="cover" className="rounded-lg" />
         </div>
       </div>

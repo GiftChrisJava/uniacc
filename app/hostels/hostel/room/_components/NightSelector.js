@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import store from 'store2';
 
-const pricePerNight = 100; // Example price per night
+const pricePerNight = 15000; // Example price per night
 
 export default function NightsSelector() {
   const [nights, setNights] = useState(store.get('nights') || 1);
@@ -32,14 +32,17 @@ export default function NightsSelector() {
   return (
     <div className="flex flex-col items-center">
       <p className="text-gray-800 mb-2">How many nights are you going to spend?</p>
-      <div className="flex items-center mb-4">
-        <button className="px-4 py-2 bg-blue-600 text-white rounded-l" onClick={handleDecrement}>-</button>
-        <span className="px-4 py-2 bg-gray-200">{nights}</span>
-        <button className="px-4 py-2 bg-blue-600 text-white rounded-r" onClick={handleIncrement}>+</button>
+      <section className='flex flex-row justify-center items-center gap-16'>
+      <div className="flex items-center mb-4 ">
+        <button className="px-2 bg-orange-700 text-gray-100 rounded-full" onClick={handleDecrement}>-</button>
+        <span className="px-5 py-2">{nights}</span>
+        <button className="px-2 bg-orange-700 text-gray-100 rounded-full" onClick={handleIncrement}>+</button>
       </div>
-      <p className="text-gray-800 mb-4">Price: <span className="font-bold">${price}</span></p>
-      <p className="text-gray-800">Booking for 1 person per bed for {nights} nights</p>
-      <p className="text-gray-800 font-bold">Total Price: ${price}</p>
+      <p className="text-gray-800 mb-4">Price: <span className="font-bold">MWK {price}</span></p>
+      
+      </section>
+      <p className="text-gray-800 mt-8">Booking for 1 person per bed for {nights} nights</p>
+      <p className="text-gray-800 font-bold mb-8">Total Price: ${price}</p>
     </div>
   );
 }
