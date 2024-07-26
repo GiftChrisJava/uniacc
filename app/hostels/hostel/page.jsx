@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import roomImage from '../../../public/a.jpeg';
 import { ShowerHead } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Room() {
   return (
@@ -35,7 +36,7 @@ export default function Room() {
         This is a shared space; respect is a must. Losing keys will attract a fee of MWK 30,000. No drinking or smoking.
       </p>
 
-      <button className="px-6 py-2 mt-8 rounded-lg bg-orange-600 text-white text-lg font-bold">I want to book this room</button>
+      <Link href="/hostels/hostel/room" className="px-6 py-2 mt-8 rounded-lg bg-orange-700 text-white text-lg font-bold">I want to book this room</Link>
     </div>
   );
 }
