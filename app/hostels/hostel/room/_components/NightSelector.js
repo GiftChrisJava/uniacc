@@ -42,7 +42,7 @@ export default function NightsSelector() {
       
       </section>
       <p className="text-gray-800 mt-8">Booking for 1 person per bed for {nights} nights</p>
-      <p className="text-gray-800 font-bold mb-8">Total Price: ${price}</p>
+      <p className="text-gray-800 font-bold mb-8">Total Price: MWK {price}</p>
     </div>
   );
 }
